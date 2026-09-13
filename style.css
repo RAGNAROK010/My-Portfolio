@@ -1,0 +1,664 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0f766e;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+  height: 12vh;
+  background-color: #14b8a6;
+  color: #ffffff;
+  padding: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+  position: fixed;
+  z-index: 1000;
+  animation: navDown 0.8s ease;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #99f6e4;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: #99f6e4;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+#Home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 40px;
+  margin-left: 20px;
+  padding-top: 70px;
+}
+
+#Home > div:first-child {
+  animation: homeText 1s ease;
+}
+
+#Home h1 {
+  color: white;
+  font-size: 80px;
+  animation: fadeUp 0.8s ease;
+  margin-bottom: 30px;
+}
+
+#Home p {
+  color: #e5e7eb;
+  font-size: 30px;
+  animation: fadeUp 1s ease;
+}
+
+#Home h3 {
+  color: #99f6e4;
+  font-size: 30px;
+  animation: fadeUp 1.2s ease;
+}
+
+#Home img {
+  height: 100vh;
+  margin-right: 80px;
+  animation:
+    homeImage 1.2s ease,
+    floatImage 4s ease-in-out 1.2s infinite;
+}
+
+#About {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8rem;
+  margin-left: 20px;
+  view-timeline-name: --about;
+  view-timeline-axis: block;
+}
+
+#About > div:first-child {
+  animation: aboutText linear both;
+  animation-timeline: --about;
+  animation-range: entry 10% cover 35%;
+}
+
+#About h1 {
+  color: #99f6e4;
+}
+
+#About p {
+  color: #e5e7eb;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+#About img {
+  height: 120vh;
+  margin-right: 80px;
+  animation: aboutImage linear both;
+  animation-timeline: --about;
+  animation-range: entry 10% cover 35%;
+}
+
+h1 {
+  color: #99f6e4;
+}
+
+p {
+  color: #e5e7eb;
+  margin-bottom: 15px;
+}
+
+#Skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 8rem;
+  view-timeline-name: --skills;
+  view-timeline-axis: block;
+}
+
+#Skills > div:first-child {
+  animation: skillsTitle linear both;
+  animation-timeline: --skills;
+  animation-range: entry 5% cover 25%;
+}
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 90vh;
+  padding-top: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+#skills img {
+  width: 150px;
+  height: 30vh;
+  transition: transform 0.4s ease;
+}
+
+.img1 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.img2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.img1 > div,
+.img2 > div {
+  animation: skillCards linear both;
+  animation-timeline: --skills;
+  animation-range: entry 15% cover 45%;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.img1 > div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.img1 > div:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.img1 > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.img1 > div:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+.img2 > div:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+.img2 > div:nth-child(2) {
+  animation-delay: 0.85s;
+}
+
+.img2 > div:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.img2 > div:nth-child(4) {
+  animation-delay: 1.15s;
+}
+
+.img1 > div:hover,
+.img2 > div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.img1 > div:hover img,
+.img2 > div:hover img {
+  transform: scale(1.08) rotate(3deg);
+}
+
+h2 {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.img1 > div:hover h2,
+.img2 > div:hover h2 {
+  color: #99f6e4;
+}
+
+#Contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 8rem;
+  view-timeline-name: --contact;
+  view-timeline-axis: block;
+}
+
+#Contact > div:first-child {
+  animation: contactTitle linear both;
+  animation-timeline: --contact;
+  animation-range: entry 5% cover 25%;
+}
+
+#contacts {
+  width: 50%;
+  height: 80vh;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  animation: contactCard linear both;
+  animation-timeline: --contact;
+  animation-range: entry 10% cover 40%;
+  padding-bottom: 20px;
+}
+
+.line1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+form {
+  padding-top: 30px;
+}
+
+.line1 input {
+  height: 8vh;
+  width: 270px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid #99f6e4;
+}
+
+.line2 input {
+  height: 8vh;
+  width: 600px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid #99f6e4;
+}
+
+.line3 textarea {
+  height: 30vh;
+  width: 600px;
+  vertical-align: top;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid #99f6e4;
+}
+
+input,
+textarea {
+  color: white;
+  padding: 10px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #99f6e4;
+  box-shadow: 0 0 15px rgba(153, 246, 228, 0.25);
+}
+
+input::placeholder {
+  color: white;
+  font-weight: bold;
+}
+
+textarea::placeholder {
+  color: white;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.btn {
+  height: 5vh;
+  width: 100px;
+  padding-top: 5px;
+  text-align: center;
+  background-color: #14b8a6;
+  border-radius: 5px;
+  border: 1px solid white;
+  margin: 15px auto 0;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  background-color: #0d9488;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+#Projects {
+  text-align: center;
+  margin-top: 8rem;
+  view-timeline-name: --projects;
+  view-timeline-axis: block;
+}
+
+#Projects > div:first-child {
+  animation: projectsTitle linear both;
+  animation-timeline: --projects;
+  animation-range: entry 5% cover 25%;
+}
+
+.Projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  animation: projectsContainer linear both;
+  animation-timeline: --projects;
+  animation-range: entry 10% cover 40%;
+}
+
+.card1 {
+  height: 62vh;
+  width: 40%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  animation: projectCardLeft linear both;
+  animation-timeline: --projects;
+  animation-range: entry 10% cover 45%;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.card2 {
+  height: 62vh;
+  width: 40%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  animation: projectCardRight linear both;
+  animation-timeline: --projects;
+  animation-range: entry 15% cover 50%;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.head p {
+  margin-bottom: 30px;
+}
+
+.card1,
+.card2 {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.card1:hover,
+.card2:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.Projects img {
+  width: 100%;
+  height: 40vh;
+}
+
+.text {
+  text-align: left;
+  margin-left: 5px;
+}
+
+.text h1 {
+  color: black;
+  margin-bottom: 0px;
+  font-size: 20px;
+}
+
+.text p {
+  color: #0d9488;
+  margin-top: 3px;
+}
+
+.btn2 {
+  height: 3.2vh;
+  width: 100px;
+  /* padding: 3px; */
+  text-align: center;
+  background-color: #14b8a6;
+  border-radius: 20px;
+  border: 1px solid white;
+  margin: 15px auto 0;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.btn2:hover {
+  transform: translateY(-4px) scale(1.05);
+  background-color: #0d9488;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.btn2 a {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes navDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes homeText {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes homeImage {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatImage {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes aboutText {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes aboutImage {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes skillsTitle {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skillCards {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes contactTitle {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactCard {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes projectsTitle {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes projectsContainer {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes projectCardLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes projectCardRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}

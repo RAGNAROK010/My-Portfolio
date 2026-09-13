@@ -485,7 +485,382 @@ textarea::placeholder {
   text-decoration: none;
   color: white;
 }
+@media (max-width: 1024px) {
+  .nav {
+    gap: 45px;
+  }
 
+  #Home {
+    margin-left: 30px;
+    gap: 20px;
+  }
+
+  #Home h1 {
+    font-size: 65px;
+  }
+
+  #Home p,
+  #Home h3 {
+    font-size: 24px;
+  }
+
+  #Home img {
+    height: 75vh;
+    margin-right: 30px;
+  }
+
+  #About {
+    margin-left: 30px;
+    gap: 30px;
+  }
+
+  #About p {
+    font-size: 19px;
+  }
+
+  #About img {
+    height: 85vh;
+    margin-right: 30px;
+  }
+
+  #skills {
+    width: 85%;
+    height: auto;
+    min-height: 75vh;
+    padding: 40px 20px;
+  }
+
+  .img1,
+  .img2 {
+    gap: 20px;
+  }
+
+  #skills img {
+    width: 120px;
+    height: 23vh;
+  }
+
+  .Projects {
+    gap: 25px;
+    padding: 0 25px;
+  }
+
+  .card1,
+  .card2 {
+    width: 45%;
+    height: auto;
+    min-height: 55vh;
+  }
+
+  .Projects img {
+    height: 32vh;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  #contacts {
+    width: 75%;
+  }
+
+  .line1 input {
+    width: 220px;
+  }
+
+  .line2 input,
+  .line3 textarea {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 15px;
+    height: 10vh;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0 10px;
+    overflow: hidden;
+  }
+
+  .nav a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  #Home {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-left: 0;
+    padding: 130px 20px 0;
+  }
+
+  #Home h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+  }
+
+  #Home p,
+  #Home h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  #Home p br {
+    display: none;
+  }
+
+  #Home img {
+    height: 65vh;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  #About {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0;
+    padding: 0 20px;
+    margin-top: 6rem;
+  }
+
+  #About > div:first-child {
+    width: 100%;
+  }
+
+  #About p {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  #About p br {
+    display: none;
+  }
+
+  #About img {
+    height: 70vh;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  #Skills {
+    margin-top: 6rem;
+    padding: 0 15px;
+  }
+
+  #skills {
+    width: 95%;
+    min-height: auto;
+    padding: 35px 10px;
+    border-radius: 30px;
+  }
+
+  .img1,
+  .img2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+    width: 100%;
+  }
+
+  #skills img {
+    width: 100px;
+    height: 18vh;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  #Projects {
+    margin-top: 6rem;
+    padding: 0 15px;
+  }
+
+  .Projects {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .card1 {
+    width: 90%;
+    height: auto;
+    min-height: 57vh;
+  }
+  .card2 {
+    width: 90%;
+    height: auto;
+    min-height: 55vh;
+  }
+
+  .Projects img {
+    height: 30vh;
+  }
+
+  .text {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .text h1 {
+    font-size: 19px;
+  }
+
+  .text p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .text p br {
+    display: none;
+  }
+
+  #Contact {
+    margin-top: 6rem;
+    padding: 0 15px;
+  }
+
+  #Contact > div:first-child p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #contacts {
+    width: 95%;
+    height: auto;
+    min-height: 70vh;
+    padding-bottom: 25px;
+  }
+
+  .line1 {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  form {
+    padding-top: 20px;
+  }
+
+  .line1 input,
+  .line2 input,
+  .line3 textarea {
+    width: 85%;
+  }
+
+  .line1 input,
+  .line2 input {
+    height: 7vh;
+  }
+
+  .line3 textarea {
+    height: 25vh;
+  }
+
+  .btn {
+    width: 140px;
+    height: 45px;
+    padding-top: 10px;
+    margin: 20px auto 0;
+  }
+  .btn2 {
+    height: 25px;
+    padding-top: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 10px;
+    padding: 0 5px;
+  }
+
+  .nav a {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  #Home {
+    padding-top: 110px;
+  }
+
+  #Home h1 {
+    font-size: 45px;
+  }
+
+  #Home p,
+  #Home h3 {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  #Home img {
+    height: 55vh;
+  }
+
+  #About p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  #About img {
+    height: 55vh;
+  }
+
+  #skills {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  .img1,
+  .img2 {
+    gap: 25px 10px;
+  }
+
+  #skills img {
+    width: 80px;
+    height: 14vh;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  .card1,
+  .card2 {
+    width: 100%;
+  }
+
+  .Projects img {
+    height: 25vh;
+  }
+
+  .text h1 {
+    font-size: 18px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+
+  #contacts {
+    width: 100%;
+  }
+
+  .line1 input,
+  .line2 input,
+  .line3 textarea {
+    width: 90%;
+  }
+
+  .btn {
+    width: 145px;
+    height: 45px;
+  }
+}
 @keyframes navDown {
   from {
     opacity: 0;

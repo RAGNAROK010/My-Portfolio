@@ -17,7 +17,7 @@
     </div>
     <div id="Home">
       <div>
-        <h1>Hi, I'm</h1>
+        <h1>Hi, I'm Mubarak</h1>
         <p>
           A frontend developer who builds modern, responsive, and <br />
           engaging websites that bring ideas to life.
@@ -85,7 +85,7 @@
           </div>
           <div>
             <img src="./Assets/Images/tailwind css logo.png" alt="" />
-            <h2>Tailwins CSS</h2>
+            <h2>Tailwind CSS</h2>
           </div>
           <div>
             <img src="./Assets/Images/javascript logo.webp" alt="" />
@@ -114,8 +114,9 @@
     </div>
     <div id="Projects">
       <div class="head">
-        <h1>Projects</h1>
-        <p>A showcase of things I’ve built and brought to life.</p>
+        <h1 style="font-size: 50px;">Projects</h1>
+        <p style="font-size: 22px;
+  margin-bottom: 30px;" >A showcase of things I’ve built and brought to life.</p>
       </div>
       <div class="Projects">
         <div class="card1">
@@ -173,25 +174,40 @@
       <div id="contacts">
         <div class="line1">
           <form action="">
-            <input type="text" placeholder="Name" />
+            <input type="text" id="name" placeholder="Name" />
           </form>
           <form action="">
-            <input type="text" placeholder="Email" />
+            <input type="text" id="email" placeholder="Email" />
           </form>
         </div>
         <div class="line2">
-          <form action=""><input type="text" placeholder="Subject" /></form>
+          <form action="">
+            <input type="text" id="subject" placeholder="Subject" />
+          </form>
         </div>
         <div class="line3">
           <form action="">
-            <textarea name="" id="" placeholder="Your Message"></textarea>
+            <textarea
+              name=""
+              id="message"
+              placeholder="Your Message"
+            ></textarea>
           </form>
         </div>
         <div class="btn">
-          <a href="https://wa.me/2349036346292" target="_blank">Send Message</a>
+          <a
+            id="whatsappLink"
+            href="https://wa.me/2349036346292"
+            target="_blank"
+            onclick="sendToWhatsApp(event)"
+          >
+            Send Message
+          </a>
         </div>
       </div>
     </div>
+    <div class="footer">
+    <p>© 2026 Mubarak Builds. All rights reserved.</p>
     <script src="/script.js"></script>
   </body>
 </html>

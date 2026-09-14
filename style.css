@@ -117,12 +117,14 @@ body {
 
 #About h1 {
   color: #99f6e4;
+  font-size: 50px;
+  margin-bottom: 15px;
 }
 
 #About p {
   color: #e5e7eb;
   margin-bottom: 15px;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 #About img {
@@ -151,6 +153,13 @@ p {
   margin-top: 8rem;
   view-timeline-name: --skills;
   view-timeline-axis: block;
+}
+#Skills h1 {
+  font-size: 50px;
+}
+#Skills p {
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
 #Skills > div:first-child {
@@ -182,6 +191,7 @@ p {
   display: flex;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 40px;
 }
 
 .img2 {
@@ -280,6 +290,12 @@ h2 {
   animation-timeline: --contact;
   animation-range: entry 10% cover 40%;
   padding-bottom: 20px;
+}
+#Contact h1 {
+  font-size: 50px;
+}
+#Contact p {
+  font-size: 17px;
 }
 
 .line1 {
@@ -484,6 +500,12 @@ textarea::placeholder {
 .btn2 a {
   text-decoration: none;
   color: white;
+}
+.footer {
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  padding-bottom: 20px;
 }
 @media (max-width: 1024px) {
   .nav {

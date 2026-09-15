@@ -14,7 +14,17 @@ body {
   background-color: #0f766e;
   width: 100%;
 }
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
+img {
+  max-width: 100%;
+  display: block;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -524,6 +534,117 @@ textarea::placeholder {
   text-decoration: none;
   color: white;
 }
+#Reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 35%;
+  height: 100vh;
+  view-timeline-name: --reviews;
+  view-timeline-axis: block;
+}
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+
+  margin: 20px auto;
+
+  background-color: white;
+  height: 5vh;
+  border-radius: 5px;
+  border: none;
+
+  cursor: pointer;
+}
+.google-btn img {
+  height: 2.5vh;
+  width: 30px;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+hr {
+  height: 1px;
+  width: 43%;
+  background-color: white;
+  border: none;
+}
+.review textarea {
+  width: 100%;
+  height: 30vh;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid #99f6e4;
+  margin-top: -30px;
+}
+.review p {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.review::placeholder {
+  color: black;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 35px;
+  color: #555;
+  cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+  color: #facc15;
+}
+#submitReview {
+  width: 200px;
+  padding: 12px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #14b8a6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#submitReview:hover {
+  background-color: #0f766e;
+  transform: translateY(-2px);
+}
 .footer {
   text-align: center;
   color: white;
@@ -532,47 +653,62 @@ textarea::placeholder {
 }
 @media (max-width: 1024px) {
   .nav {
-    gap: 45px;
+    gap: 35px;
+    height: 10vh;
+    padding: 0 20px;
   }
 
   #Home {
-    margin-left: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
     gap: 20px;
   }
 
   #Home h1 {
-    font-size: 65px;
+    font-size: 55px;
   }
 
   #Home p,
   #Home h3 {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   #Home img {
-    height: 75vh;
-    margin-right: 30px;
+    width: auto;
+    height: 65vh;
+    margin-right: 10px;
   }
 
+  /* ABOUT */
+
   #About {
-    margin-left: 30px;
-    gap: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 20px;
+  }
+
+  #About h1 {
+    font-size: 45px;
   }
 
   #About p {
-    font-size: 19px;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   #About img {
-    height: 85vh;
-    margin-right: 30px;
+    width: auto;
+    height: 70vh;
+    margin-right: 10px;
   }
 
+  /* SKILLS */
+
   #skills {
-    width: 85%;
+    width: 90%;
     height: auto;
-    min-height: 75vh;
-    padding: 40px 20px;
+    min-height: 70vh;
+    padding: 35px 20px;
   }
 
   .img1,
@@ -581,77 +717,91 @@ textarea::placeholder {
   }
 
   #skills img {
-    width: 120px;
-    height: 23vh;
+    width: 110px;
+    height: auto;
   }
 
+  /* PROJECTS */
+
   .Projects {
-    gap: 25px;
-    padding: 0 25px;
+    gap: 20px;
+    padding: 0 20px;
   }
 
   .card1,
   .card2 {
     width: 45%;
     height: auto;
-    min-height: 55vh;
+    min-height: 0;
   }
 
   .Projects img {
-    height: 32vh;
+    width: 100%;
+    height: auto;
   }
 
-  .text p {
-    font-size: 16px;
-  }
+  /* CONTACT */
 
   #contacts {
-    width: 75%;
+    width: 80%;
+    height: auto;
+    padding: 20px;
   }
 
   .line1 input {
-    width: 220px;
+    width: 45%;
   }
 
   .line2 input,
   .line3 textarea {
-    width: 80%;
+    width: 90%;
+  }
+
+  /* REVIEWS */
+
+  #Reviews {
+    width: 60%;
+    height: auto;
+    min-height: 80vh;
+    padding: 30px 20px;
   }
 }
-
 @media (max-width: 768px) {
+  /* NAVBAR */
+
   .nav {
-    gap: 15px;
-    height: 10vh;
+    gap: 12px;
+    height: 70px;
     width: 100%;
-    margin-left: 0;
-    margin-top: 0;
-    padding: 0 10px;
+    padding: 0 8px;
     overflow: hidden;
   }
 
   .nav a {
-    font-size: 14px;
+    font-size: 13px;
     white-space: nowrap;
   }
+
+  /* HOME */
 
   #Home {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    margin-left: 0;
-    padding: 130px 20px 0;
+    margin: 0;
+    padding: 110px 20px 0;
   }
 
   #Home h1 {
-    font-size: 55px;
+    font-size: clamp(38px, 8vw, 55px);
+    line-height: 1.1;
     margin-bottom: 20px;
   }
 
   #Home p,
   #Home h3 {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   #Home p br {
@@ -659,26 +809,37 @@ textarea::placeholder {
   }
 
   #Home img {
-    height: 65vh;
-    margin-right: 0;
-    margin-top: 20px;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    max-height: 55vh;
+    margin: 20px auto 0;
   }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* ABOUT */
 
   #About {
     flex-direction: column;
     text-align: center;
-    margin-left: 0;
+    margin: 6rem 0 0;
     padding: 0 20px;
-    margin-top: 6rem;
   }
 
   #About > div:first-child {
     width: 100%;
   }
 
+  #About h1 {
+    font-size: 40px;
+  }
+
   #About p {
     font-size: 17px;
-    line-height: 28px;
+    line-height: 27px;
   }
 
   #About p br {
@@ -686,39 +847,55 @@ textarea::placeholder {
   }
 
   #About img {
-    height: 70vh;
-    margin-right: 0;
-    margin-top: 20px;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    max-height: 55vh;
+    margin: 20px auto 0;
   }
+
+  /* SKILLS */
 
   #Skills {
     margin-top: 6rem;
     padding: 0 15px;
   }
 
+  #Skills h1 {
+    font-size: 40px;
+  }
+
+  #Skills p {
+    font-size: 17px;
+  }
+
   #skills {
-    width: 95%;
-    min-height: auto;
-    padding: 35px 10px;
-    border-radius: 30px;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 30px 15px;
+    border-radius: 25px;
   }
 
   .img1,
   .img2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px 20px;
+    gap: 30px 15px;
     width: 100%;
   }
 
   #skills img {
-    width: 100px;
-    height: 18vh;
+    width: 90px;
+    height: auto;
+    margin: auto;
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 17px;
   }
+
+  /* PROJECTS */
 
   #Projects {
     margin-top: 6rem;
@@ -731,24 +908,20 @@ textarea::placeholder {
     padding: 0;
   }
 
-  .card1 {
-    width: 90%;
-    height: auto;
-    min-height: 57vh;
-  }
+  .card1,
   .card2 {
-    width: 90%;
+    width: 100%;
     height: auto;
-    min-height: 55vh;
+    min-height: 0;
   }
 
   .Projects img {
-    height: 30vh;
+    width: 100%;
+    height: auto;
   }
 
   .text {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px;
   }
 
   .text h1 {
@@ -764,9 +937,15 @@ textarea::placeholder {
     display: none;
   }
 
+  /* CONTACT */
+
   #Contact {
     margin-top: 6rem;
     padding: 0 15px;
+  }
+
+  #Contact h1 {
+    font-size: 40px;
   }
 
   #Contact > div:first-child p {
@@ -775,15 +954,15 @@ textarea::placeholder {
   }
 
   #contacts {
-    width: 95%;
+    width: 100%;
     height: auto;
-    min-height: 70vh;
-    padding-bottom: 25px;
+    min-height: 0;
+    padding: 20px 10px 25px;
   }
 
   .line1 {
     flex-direction: column;
-    gap: 0;
+    gap: 15px;
   }
 
   form {
@@ -793,85 +972,146 @@ textarea::placeholder {
   .line1 input,
   .line2 input,
   .line3 textarea {
-    width: 85%;
+    width: 90%;
   }
 
   .line1 input,
   .line2 input {
-    height: 7vh;
+    height: 50px;
   }
 
   .line3 textarea {
-    height: 25vh;
+    height: 180px;
   }
 
   .btn {
     width: 140px;
     height: 45px;
-    padding-top: 10px;
     margin: 20px auto 0;
   }
-  .btn2 {
-    height: 25px;
-    padding-top: 3px;
+
+  /* REVIEWS */
+
+  #Reviews {
+    width: 90%;
+    height: auto;
+    min-height: 0;
+    padding: 30px 20px;
+  }
+
+  .review {
+    width: 100%;
+  }
+
+  .review textarea {
+    width: 100%;
+    height: 180px;
+    margin-top: 0;
+  }
+
+  .google-btn {
+    width: 220px;
+    height: 45px;
+    margin: 20px auto;
+  }
+
+  #submitReview {
+    width: 200px;
+    height: 45px;
   }
 }
-
 @media (max-width: 480px) {
+  /* NAVBAR */
+
   .nav {
-    gap: 10px;
+    gap: 8px;
+    height: 60px;
     padding: 0 5px;
   }
 
   .nav a {
-    font-size: 11px;
-    white-space: nowrap;
+    font-size: 10px;
   }
 
+  /* HOME */
+
   #Home {
-    padding-top: 110px;
+    padding: 95px 15px 0;
   }
 
   #Home h1 {
-    font-size: 45px;
+    font-size: 38px;
   }
 
   #Home p,
   #Home h3 {
-    font-size: 17px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   #Home img {
-    height: 55vh;
+    max-width: 85%;
+    max-height: 45vh;
+  }
+
+  /* ABOUT */
+
+  #About {
+    padding: 0 15px;
+    margin-top: 5rem;
+  }
+
+  #About h1 {
+    font-size: 35px;
   }
 
   #About p {
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 24px;
   }
 
   #About img {
-    height: 55vh;
+    max-width: 85%;
+    max-height: 45vh;
+  }
+
+  /* SKILLS */
+
+  #Skills {
+    padding: 0 10px;
+  }
+
+  #Skills h1 {
+    font-size: 35px;
+  }
+
+  #Skills p {
+    font-size: 15px;
   }
 
   #skills {
     width: 100%;
-    border-radius: 25px;
+    padding: 25px 10px;
+    border-radius: 20px;
   }
 
   .img1,
   .img2 {
-    gap: 25px 10px;
+    gap: 25px 8px;
   }
 
   #skills img {
-    width: 80px;
-    height: 14vh;
+    width: 70px;
   }
 
   h2 {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  /* PROJECTS */
+
+  #Projects {
+    padding: 0 10px;
   }
 
   .card1,
@@ -880,7 +1120,7 @@ textarea::placeholder {
   }
 
   .Projects img {
-    height: 25vh;
+    height: auto;
   }
 
   .text h1 {
@@ -889,21 +1129,62 @@ textarea::placeholder {
 
   .text p {
     font-size: 14px;
+    line-height: 21px;
+  }
+
+  /* CONTACT */
+
+  #Contact {
+    padding: 0 10px;
+  }
+
+  #Contact h1 {
+    font-size: 35px;
   }
 
   #contacts {
     width: 100%;
+    padding: 20px 5px;
   }
 
   .line1 input,
   .line2 input,
   .line3 textarea {
-    width: 90%;
+    width: 92%;
   }
 
-  .btn {
-    width: 145px;
-    height: 45px;
+  .line3 textarea {
+    height: 160px;
+  }
+
+  /* REVIEWS */
+
+  #Reviews {
+    width: 95%;
+    padding: 25px 15px;
+  }
+
+  .review textarea {
+    height: 160px;
+  }
+
+  .google-btn {
+    width: 210px;
+  }
+
+  #submitReview {
+    width: 190px;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    margin-top: 40px;
+    padding: 0 10px 20px;
+  }
+
+  .footer p {
+    font-size: 13px;
   }
 }
 @keyframes navDown {

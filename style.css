@@ -13,6 +13,7 @@ html {
 body {
   background-color: #0f766e;
   width: 100%;
+  margin-left: 15px;
 }
 
 .nav {
@@ -20,7 +21,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 100px;
-  width: 100%;
+  width: 110%;
   height: 12vh;
   background-color: #14b8a6;
   color: #ffffff;
@@ -297,7 +298,29 @@ h2 {
 #Contact p {
   font-size: 17px;
 }
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
 
+.social-icons a {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  color: #14b8a6;
+}
 .line1 {
   display: flex;
   align-items: center;
